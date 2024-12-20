@@ -22,6 +22,12 @@
 
 ## Triển khai
 - Vercel
+- Heroku
+
+# Links:
+- Backend: https://github.com/quachthanhhung12349/hospital-management-be
+- Frontend: https://github.com/quachthanhhung12349/Hospital-management-project
+- SQL: https://drive.google.com/file/d/1yXoRxZP2nFmg8gC1n4zf8KNKIsBASmXm/view?usp=sharing
 
 ## Tính năng
 
@@ -56,13 +62,13 @@
 ### Back End
 - Git clone dự án này
 - Dùng IntelliJ để chạy dự án
+- Chạy cơ sở dữ liệu PostgreSQL theo đường dẫn ở trên
 - Chạy ứng dụng Spring Boot
 
 ### Front End
 - Git clone dự án này
 - Chuyển đường dẫn thành frontend và thực hiện `npm install`
-- Khởi tạo ứng dụng bằng `vercel build`
-- Chạy ứng dụng bằng `serve -s build`
+- Chạy ứng dụng bằng `npm start`
 
 ## Cách sử dụng
 - Người dùng có thể đăng nhập với tư cách là Admin, Bệnh nhân hoặc Bác sĩ.
