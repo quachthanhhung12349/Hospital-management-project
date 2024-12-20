@@ -163,7 +163,7 @@ export const Login: React.FunctionComponent = (props) => {
     }
 
     const authentication = (user: any) => {
-        if(user.role === "Admin"){
+        if(user.role === "Admin" || user.role === "Owner") {
             history.push({
                 pathname: '/admin',
                 state: {  //to access state use useLocation hook in function component

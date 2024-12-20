@@ -1,46 +1,102 @@
-# Getting Started with Create React App
+# Giới thiệu ứng dụng
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ứng dụng giúp bệnh nhân đăng ký khám bệnh với các bác sĩ.
 
-## Available Scripts
+## Front End
+- React JS ^17.0.1
+- Material UI ^4.11.2
+- TypeScript ^^4.1.3
+- node-sass ^4.14.1
+- AJAX - axios ^0.21.1
+- Git
+- Visual Studio Code
 
-In the project directory, you can run:
+## Back End
+- Java 17
+- Spring Boot ^2.4.1
+- Hibernate 5.1.3.Final
+- Swagger ^2.9.2
+- SQL / PostgreSQL: version 42.2.18
+- Maven 1.8
+- Tomcat 9.0
 
-### `yarn start`
+## Triển khai
+- Vercel
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tính năng
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Admin:
+1. Đăng nhập vào tài khoản đã có.
+2. Xem danh sách tất cả tài khoản bác sĩ - Đang yêu cầu / Đã duyệt / Đã từ chối.
+3. Xem thông tin chi tiết về bác sĩ.
+4. Duyệt hoặc từ chối tài khoản bác sĩ.
+5. Đăng xuất.
 
-### `yarn test`
+### Bệnh nhân:
+1. Đăng ký tài khoản mới.
+2. Đăng nhập vào tài khoản đã có.
+3. Tạo yêu cầu với bác sĩ đã được duyệt để xin lời khuyên hoặc kê đơn thuốc bằng cách mô tả vấn đề.
+4. Xem danh sách tất cả yêu cầu trước đó - Đã trả lời / Đang chờ.
+5. Tạo một chủ đề mới trong trang diễn đàn.
+6. Có thể trả lời các chủ đề trong diễn đàn của người khác.
+7. Đăng xuất.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Bác sĩ:
+1. Đăng ký tài khoản mới.
+2. Đăng nhập chỉ khi tài khoản đã được admin duyệt.
+3. Xem danh sách các yêu cầu mới từ bệnh nhân.
+4. Xem danh sách các yêu cầu đã trả lời trước đó.
+5. Trả lời yêu cầu của bệnh nhân bằng cách cung cấp lời khuyên, kê đơn thuốc hoặc yêu cầu bệnh nhân đến khám trực tiếp.
+6. Có thể tạo một chủ đề mới trong trang diễn đàn.
+7. Có thể trả lời các chủ đề trong diễn đàn của người khác.
+8. Đăng xuất.
 
-### `yarn build`
+## Hướng dẫn bắt đầu
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Back End
+- Git clone dự án này
+- Dùng IntelliJ để chạy dự án
+- Chạy ứng dụng Spring Boot
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Front End
+- Git clone dự án này
+- Chuyển đường dẫn thành frontend và thực hiện `npm install`
+- Khởi tạo ứng dụng bằng `vercel build`
+- Chạy ứng dụng bằng `serve -s build`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Cách sử dụng
+- Người dùng có thể đăng nhập với tư cách là Admin, Bệnh nhân hoặc Bác sĩ.
+- Admin chịu trách nhiệm quản lý tất cả tài khoản bác sĩ.
+- Admin có thể duyệt hoặc từ chối yêu cầu tài khoản bác sĩ mới.
+- Bệnh nhân có thể tạo yêu cầu cho bác sĩ cụ thể để xin lời khuyên hoặc kê đơn thuốc.
+- Bác sĩ có thể trả lời yêu cầu của bệnh nhân.
+- Cả bệnh nhân và bác sĩ đều có thể xem danh sách các yêu cầu, bao gồm các yêu cầu mới và đã được trả lời.
+- Người dùng có thể đăng xuất.
 
-### `yarn eject`
+### Authentication FLow
+![Alt](/login.png "login")
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Admin FLow
+![Alt](/admin.png "admin")
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Patient and Doctor FLow
+![Alt](/patientDoctor.png "patientDoctor")
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Development Tool
+- Eclipse - Spring Tools Suit 4
+- Visual Studio code
+- Postman
+- DBeaver
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## ER Diagram
+![Alt](/ERD.png "ERD")
 
-## Learn More
+## Giấy phép
+Dự án này thuộc giấy phép GNU General Public License.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+
+

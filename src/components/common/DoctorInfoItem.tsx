@@ -4,6 +4,7 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 import { updateStatus } from '../../remote/remote-functions';
+import { createTrue } from 'typescript';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -77,6 +78,7 @@ export const DoctorInfoItem: React.FunctionComponent<any> = (props: any) => {
 
     const onSubmit = async (doctorId, status, email) => {
         try {
+            console.log(doctorId);
             setUpdating(true)
             let res = await updateStatus(doctorId, status, email)
             props.handleChange();
