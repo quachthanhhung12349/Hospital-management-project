@@ -1,0 +1,19 @@
+{
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "devCommand": "cd frontend && npm start",
+  "buildCommand": "cd frontend && npm run build"
+}
